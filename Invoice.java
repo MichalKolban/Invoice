@@ -8,10 +8,10 @@ public class Invoice {
     private Client client;
     private int id;
     private String date;
-    private int income;
+    private double income;
 
 
-    public Invoice(Client client, int id, String date, int income){
+    public Invoice(Client client, int id, String date, double income){
 
         this.client = client;
         this.id = id;
@@ -21,5 +21,9 @@ public class Invoice {
 
     public double Tax() {
         return (0.19 * income);
+    }
+
+    public String dateNow(){
+        return date;
     }
 }
